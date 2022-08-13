@@ -18,3 +18,7 @@ func (a *User) GetList(params url.Values) interface{} {
 func (a *User) GetUserInfo(params url.Values) interface{} {
 	return Query(user.GetUserInfo, params, a.CTX)
 }
+
+func (a *User) BatchGetUserInfo(in interface{}) interface{} {
+	return Call(user.BatchGetUserInfo, in, a.CTX)
+}
