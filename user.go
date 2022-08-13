@@ -11,10 +11,10 @@ type User struct {
 	CTX *offiaccount.OffiAccount
 }
 
-func (a *Account) GetList(params url.Values) interface{} {
+func (a *User) GetList(params url.Values) interface{} {
 	return Query(user.Get, params, a.CTX)
 }
 
-func (a *Account) GetUserInfo(params url.Values) interface{} {
+func (a *User) GetUserInfo(params url.Values) interface{} {
 	return Query(user.GetUserInfo, params, a.CTX)
 }
